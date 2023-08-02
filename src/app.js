@@ -46,6 +46,8 @@ app.get('/weather',function(req,res){
 app.get('*',(req,res)=>{
   res.render('404')
 })
-  app.listen(3000,()=>{
+
+const port = process.env.PORT || 3000
+  app.listen(port,()=>{
     console.log('server start');
   })
